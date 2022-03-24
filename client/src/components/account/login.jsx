@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Box, Dialog, withStyles, makeStyles, Typography, ListItem, List } from "@material-ui/core";
 import { GoogleLogin } from 'react-google-login';
 import { AccountContext } from "../../context/AccountProvider";
+import { clientId } from "../../common/Data";
 
 const useStyles = makeStyles({
     component: {
@@ -44,15 +45,16 @@ const style = {
         boxShadow: 'none',
         borderRadius: 0,
         maxHeight: '100%',
-        maxWidth: '100%'
+        maxWidth: '100%',
+        overflow: 'hidden'
     }
 }
 const Login = ({ classes }) => {
     const classname = useStyles();
     const qrcode = 'https://www.ginifab.com/feeds/qr_code/img/qr_code_scanner.jpg';
-    const clientId = '987482291410-u38v37rkgnp2bqkcrbosq78sil1neiko.apps.googleusercontent.com';
 
     const { account, setAccount } = useContext(AccountContext);
+
 
 
     const onloginSuccess = (res) => {
@@ -60,6 +62,7 @@ const Login = ({ classes }) => {
         setAccount(res.profileObj);
 
     }
+
 
     const onloginFailure = () => {
         console.log("login failed");
@@ -82,17 +85,20 @@ const Login = ({ classes }) => {
                         <ListItem>3. Open Whatsapp on your phone</ListItem>
                     </List>
                 </Box>
-                <Box>
+                <Box style={{ position: 'relative' }}>
                     <img src={qrcode} alt='qr' className={classname.qrcode} />
-                    <GoogleLogin
-                        clientId={clientId}
-                        buttonText=""
-                        isSignedIn={true}
-                        onSuccess={onloginSuccess}
-                        onFailure={onloginFailure}
-                        cookiePolicy={'single_host_origin'}
+                    <Box style={{ position: 'absolute', left: '50%', top: '50%' }}>
+                        <GoogleLogin
+                            clientId={clientId}
+                            buttonText=""
+                            isSignedIn={true}
+                            onSuccess={onloginSuccess}
+                            onFailure={onloginFailure}
+                            cookiePolicy={'single_host_origin'}
 
-                    />
+                        />
+                    </Box>
+
 
                 </Box>
             </Box>
