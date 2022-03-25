@@ -11,9 +11,7 @@ const useStyles = makeStyles({
     menuItem: {
         fontSize: 2,
         padding: '15px 60px 5px 24px'
-
     }
-
 })
 const HeaderMenu = () => {
     const [open, setOpen] = useState(false);
@@ -57,7 +55,6 @@ const HeaderMenu = () => {
                 </MenuItem>
             </Menu>
         </>
-
     )
 }
 export default HeaderMenu;

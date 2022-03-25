@@ -7,7 +7,6 @@ const useStyles = makeStyles({
     },
     leftComponent: {
         minWidth: 380
-
     },
     rightComponent: {
         borderLeft: '1px solid rgba(0,0,0,0.14)'
@@ -19,7 +18,6 @@ const style = {
     dialogPaper: {
         height: '95%',
         width: '91%',
-
         boxShadow: 'none',
         borderRadius: 0,
         maxHeight: '100%',

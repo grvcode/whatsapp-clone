@@ -13,13 +13,11 @@ const useStyles = makeStyles({
         padding: '10px',
         display: 'flex',
         alignItems: 'center'
-
     },
     avatar: {
         height: 37,
         width: 37,
         borderRadius: '50%'
-
     },
     icons: {
         marginLeft: 'auto',
@@ -32,8 +30,6 @@ const useStyles = makeStyles({
             fontSize: 22,
             marginRight: 8
         }
-
-
     }
 })
 const Header = () => {
