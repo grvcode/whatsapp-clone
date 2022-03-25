@@ -7,7 +7,6 @@ import { GoogleLogout } from 'react-google-login';
 import { clientId } from '../../common/Data';
 import { AccountContext } from '../../context/AccountProvider';
 
-
 const useStyles = makeStyles({
     menuItem: {
         fontSize: 2,
@@ -20,7 +19,6 @@ const HeaderMenu = () => {
     const [open, setOpen] = useState(false);
     const { setAccount } = useContext(AccountContext);
     const classes = useStyles();
-
     const handleClose = () => {
         setOpen(false);
     }

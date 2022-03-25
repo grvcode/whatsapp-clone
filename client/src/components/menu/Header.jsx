@@ -6,8 +6,6 @@ import { useContext } from "react";
 import { AccountContext } from "../../context/AccountProvider";
 import HeaderMenu from "./HeaderMenu";
 
-
-
 const useStyles = makeStyles({
     header: {
         height: 35,

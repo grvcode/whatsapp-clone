@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, makeStyles, Box } from '@material-ui/core';
 import { React, useContext } from 'react';
-//comp
+
 import Login from './account/login';
 import { AccountContext } from '../context/AccountProvider';
 import ChatBox from './ChatBox.jsx';
